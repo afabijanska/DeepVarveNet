@@ -1,0 +1,22 @@
+[data paths]
+main_dir = C:/Users/an_fab/Desktop/glaciers/
+main_dir_test = C:/Users/an_fab/Desktop/glaciers/test
+main_dir_train = C:/Users/an_fab/Desktop/glaciers/train
+
+[file names]
+train_imgs_original = trainPatches.hdf5
+train_groundTruth = trainLabels.hdf5
+json_string = model.json
+
+[data attributes]
+patch_size = 48
+num_channels = 3
+
+[training settings]
+#samples per image
+N_samples = 1000
+N_epochs = 1000
+batch_size = 1000
+
+[prediction settings]
+stride = 1
