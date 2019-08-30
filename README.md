@@ -45,13 +45,13 @@ Organize your data as below. For training, keep the filenames consistent (an ori
     └───test<br>                    # test data  
          └───bw<br>
          |   DataDir1_File2.png <br>
-         |   DataDir2_File3.png <br>
+         |   DataDir2_File4.png <br>
          └───final<br>              # predicted varves overlied on original images
          |   DataDir1_File2.png <br>
          |   DataDir2_File4.png <br>
          └───preds<br>              # varve probability maps 
          |   DataDir1_File2.png <br>
-         |   DataDir2_File3.png <br>
+         |   DataDir2_File4.png <br>
          └───src<br>
              DataDir1_File2.png <br>
              DataDir2_File4.png <br>
