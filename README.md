@@ -8,7 +8,7 @@ This crepository contains source code of a DeepVarveNet - a convolutional neural
 
 Python 3.6, Tensorflow, Keras
 
-## Contact
+# Contact
 
 Anna Fabijańska
 Institute of Applied Computer Science
