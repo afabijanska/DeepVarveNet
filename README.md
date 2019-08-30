@@ -12,7 +12,7 @@ Python 3.6, Tensorflow, Keras
 
 <ul>
   <li> <b>configuration.txt</b><br> -- file to be edited; <br> -- contains data paths and train/test setings;   
-  <li> <b>ExtractMarkers.py</b><br> -- script for extracting manual varve delineations provided by an expert; it is assumed that delineations are provided in pure blue (R=0, G=0, B=255) as markings on original images; <br> -- to be run 1st;
+  <li> <b>ExtractMarkers.py</b><br> -- script for extracting manual varve delineations provided by an expert; <br> --it is assumed that delineations are provided in pure blue (R=0, G=0, B=255) as markings on original images; <br> -- to be run 1st;
   <li> <b>DivideTestTrain.py</b><br> -- script for dividing data into training and testing set; <br> -- to be run 2nd; 
   <li> <b>GlaciersGenerateData.py</b><br> -- script for extracting train patches and the corresponding labels from the images from the train set; <br> -- an equal number of patches is extracted from each train image; <br> -- to be run 3rd;
   <li> <b>GlaciersTrainCNNpix.py</b><br> -- script for training the DeepVarveNet with the train patches and the corresponding labels<br> -- to be run 4th;
