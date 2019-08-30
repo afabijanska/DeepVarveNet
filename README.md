@@ -16,7 +16,7 @@ Python 3.6, Tensorflow, Keras
   <li> <b>DivideTestTrain.py</b><br> script for dividing data into training and testing set; 
   <li> <b>GlaciersGenerateData.py</b><br> script for extracting train patches and the corresponding labels from the images from the train set; an equal numner of patches is extracted from each train image;
   <li> <b>GlaciersTrainCNNpix.py</b><br> script for training the DeepVarveNet with the train patches and the corresponding labels;
-  <li> <b>GlaciersPredict.py</b><b> script for finding varves in test images with the use of trained DeepVarveNet;
+  <li> <b>GlaciersPredict.py</b><br> script for finding varves in test images with the use of trained DeepVarveNet;
   <li> <b>models.py</b><br> file that defines architecture of a DeepVarveNet;
   <li> <b>GlaciersHelpers.py</b> - some helper functions;
 </ul>
