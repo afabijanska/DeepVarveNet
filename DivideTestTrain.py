@@ -6,18 +6,28 @@ Created on Thu Apr 18 21:55:47 2019
 """
 
 import os
+import configparser
 
-from skimage import io
+from shutil import copyfile
 
-main_dir = 'C:/Users/an_fab/Desktop/glaciers/all'
-test_dir = 'C:/Users/an_fab/Desktop/glaciers/test'
-train_dir = 'C:/Users/an_fab/Desktop/glaciers/train'
+#read configuration file
 
-dirs = os.listdir(main_dir)
+config = configparser.RawConfigParser()
+config.read('configuration.txt')
+
+main_dir = config.get('data paths','main_dir_all_data') # directory with all images
+test_dir = config.get('data paths','main_dir_test')     # directory with train images
+train_dir = config.get('data paths','main_dir_train')   # directory with test images
+
+# define test / train split
 
 counter = 0
-fraction = 0.5 #fraction training
+fraction = 0.5                  #fraction of training data
 step = int(1/fraction)
+
+#read all data and divide it into train/test subsets
+
+dirs = os.listdir(main_dir)
 
 for d in dirs:
     
@@ -33,19 +43,16 @@ for d in dirs:
         
         print(os.path.join(main_dir, d, 'src',files))
         
-        img = io.imread(os.path.join(main_dir, d, 'src',files))
-        img = img.astype('uint8')
-        bw = io.imread(os.path.join(main_dir, d, 'bw',files))
-        bw = bw.astype('uint8')
         
         fileName = d + '_' + files
-        #print(fileName)
         
         if counter % step == 0:
-            io.imsave(os.path.join(train_dir, 'src',fileName), img)
-            io.imsave(os.path.join(train_dir, 'bw',fileName), bw)
+            copyfile(os.path.join(main_dir, d, 'src',files), os.path.join(train_dir, 'src', fileName))
+            copyfile(os.path.join(main_dir, d, 'bw',files), os.path.join(train_dir, 'bw', fileName))
+            
         else:
-            io.imsave(os.path.join(test_dir, 'src',fileName), img)
-            io.imsave(os.path.join(test_dir, 'bw',fileName), bw)
-        
+            
+            copyfile(os.path.join(main_dir, d, 'src',files), os.path.join(test_dir, 'src', fileName))
+            copyfile(os.path.join(main_dir, d, 'bw',files), os.path.join(test_dir, 'bw', fileName))
+                    
         counter = counter + 1

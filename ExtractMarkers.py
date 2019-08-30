@@ -7,13 +7,14 @@ Created on Thu Apr 18 20:46:47 2019
 
 import os
 import numpy as np
+import configparser
 
 from skimage import io 
 from skimage.filters import median
 
-main_dir = 'C:/Users/an_fab/Desktop/glaciers/all/'
-test_dir = 'C:/Users/an_fab/Desktop/glaciers/test/'
-train_dir = 'C:/Users/an_fab/Desktop/glaciers/train/'
+config = configparser.RawConfigParser()
+config.read('configuration.txt')
+main_dir = config.get('data paths','main_dir_all_data') # directory with all images
 
 dirnames = os.listdir (main_dir + ".")
 
@@ -49,19 +50,11 @@ for directory in dirnames:
             labels = np.zeros((Y,X), dtype='uint8')
             indx = np.where(R>=252) and np.where(G<=3) and np.where(B<=3)  #varves
             labels[indx] = 255
-            #labels = remove_small_objects(labels)
-        
+   
             indx2 = np.where(R<=3) and np.where(G<=3) and np.where(B>=252)  #false varves
             labels[indx2] = 127
-            #labels = remove_small_objects(labels)
              
             labels = median(labels)
             
             filePath2 = os.path.join(dir_bw,file)
             io.imsave(filePath2,labels)
-
-#divide data into train and test samples
-            
-
-
-
