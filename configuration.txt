@@ -1,15 +1,15 @@
 [data paths]
 
-main_dir = C:/Users/an_fab/Desktop/glaciers/
-main_dir_all_data = C:/Users/an_fab/Desktop/glaciers/all_resized/
-main_dir_test = C:/Users/an_fab/Desktop/glaciers/test2/
-main_dir_train = C:/Users/an_fab/Desktop/glaciers/train/
+main_dir = D:/varves/
+main_dir_all_data = D:/varves/all_data/
+main_dir_test = D:/varves/test_data/
+main_dir_train = D:/varves/train_data/
 
 [file names]
 train_imgs_original = trainPatches.hdf5
 train_groundTruth = trainLabels.hdf5
-weights_file_name = best_weights_org_64.h5
-json_string = model64.json
+weights_file_name = best_weights.h5
+json_string = model.json
 
 [data attributes]
 patch_size = 64
