@@ -11,7 +11,7 @@ Python 3.6, Tensorflow, Keras
 ## Repository content
 
 <ul>
-  <li> <b>configuration.txt</b><br> file to be edited; contains data paths and train/test setings;   
+  <li> <b>configuration.txt</b><br> -- file to be edited; <br> -- contains data paths and train/test setings;   
   <li> <b>ExtractMarkers.py</b><br> script for extracting manual varve delineations provided by an expert; it is assumed that delineations are provided in pure blue (R=0, G=0, B=255) as markings on original images (to be run 1st);
   <li> <b>DivideTestTrain.py</b><br> script for dividing data into training and testing set (to be run 2nd); 
   <li> <b>GlaciersGenerateData.py</b><br> script for extracting train patches and the corresponding labels from the images from the train set; an equal number of patches is extracted from each train image (to be run 3rd);
