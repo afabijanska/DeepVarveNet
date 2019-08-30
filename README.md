@@ -1,6 +1,6 @@
 # DeepVarveNet
 
-This crepository contains source code of a DeepVarveNet - a convolutional neural network for laminae detection in images of varved sediments.
+This crepository contains source code of the DeepVarveNet - a convolutional neural network for laminae detection in images of varved sediments.
 
 # Running the code
 
@@ -67,9 +67,9 @@ Organize your data as below. For training, keep the filenames consistent (an ori
   <li> <b>GlaciersGenerateData.py</b><br> -- script for extracting train patches and the corresponding labels from the images from the train set; <br> -- to be run 3rd; <br> -- an equal number of patches is extracted from each train image; 
   <li> <b>GlaciersTrainCNNpix.py</b><br> -- script for training the DeepVarveNet with the train patches and the corresponding labels<br> -- to be run 4th;
   <li> <b>GlaciersPredict.py</b><br> -- script for finding varves in test images with the use of trained DeepVarveNet; <br> -- to be run 5th; <br> -- varve likelihood maps are saved in subdir ./preds; <br> -- final varves overlied on original data are saved in subdir ./final;
-  <li> <b>models.py</b><br> -- file that defines architecture of a DeepVarveNet;
+  <li> <b>models.py</b><br> -- file that defines architecture of the DeepVarveNet;
   <li> <b>GlaciersHelpers.py</b><br> -- some helper functions;
-  <li> <b>GlaciersEvaluate.py</b><br> -- script to compare results of varves detection with ground truths provided by an expert;
+  <li> <b>GlaciersEvaluate.py</b><br> -- script to compare results of automatic varves detection with ground truths provided by an expert;
 </ul>
 
 # Contact
