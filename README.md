@@ -6,7 +6,7 @@ This crepository contains source code of the DeepVarveNet - a convolutional neur
 
 ## Prerequisites
 
-Python 3.6, Tensorflow, Keras
+Python 3.6, Tensorflow, Keras, Anaconda3
 
 ## Data organization
 
@@ -14,7 +14,7 @@ Organize your data as below. For training, keep the filenames consistent (an ori
 
 <pre><code>
 ├───project_dir<br>
-    └───allData<br>                 # all image data available in the project
+    └───allData<br>                 # all image data available in the project (contains separate subdir for each core)
     |    └───DataDir1<br>           # images of the first sendiment core
     |    |   └───bw<br>             # binary images (varve masks)
     |    |   |   File1.png <br>
@@ -37,7 +37,7 @@ Organize your data as below. For training, keep the filenames consistent (an ori
     |            File4.png <br>
     └───train<br>                   # train data 
     |    └───bw<br>
-    |    |   DataDir1_File1.png <br>
+    |    |   DataDir1_File1.png <br>    #filenames are generated automatically 
     |    |   DataDir2_File3.png <br>
     |    └───src<br>
     |        DataDir1_File1.png <br>
@@ -62,10 +62,10 @@ Organize your data as below. For training, keep the filenames consistent (an ori
 
 <ul>
   <li> <b>configuration.txt</b><br> -- file to be edited; <br> -- contains data paths and train/test setings;   
-  <li> <b>ExtractMarkers.py</b><br> -- script for extracting manual varve delineations provided by an expert; <br> -- to be run 1st; <br> -- expects that for each sediment core subdir ./src contains original images while subdir ./gt contains manual delineations by an expert<br> -- it assumed that delineations are provided in pure blue (R=0, G=0, B=255) as markings on original images; <br> -- the extracted varve binary masks are saved in subdir ./bw;  
+  <li> <b>ExtractMarkers.py</b><br> -- script for extracting manual varve delineations provided by an expert; <br> -- to be run 1st; <br> -- expects that for each sediment core subdir ./src contains original images while subdir ./gt contains manual delineations by an expert<br> -- it is assumed that delineations are provided in pure blue (R=0, G=0, B=255) as markings on original images; <br> -- for each core the extracted varve binary masks are saved in subdir ./bw;  
   <li> <b>DivideTestTrain.py</b><br> -- script for dividing data into training and testing set; <br> -- to be run 2nd; <br> -- copies every second image to ./train and ./test dir respectively;
-  <li> <b>GlaciersGenerateData.py</b><br> -- script for extracting train patches and the corresponding labels from the images from the train set; <br> -- to be run 3rd; <br> -- an equal number of patches is extracted from each train image; 
-  <li> <b>GlaciersTrainCNNpix.py</b><br> -- script for training the DeepVarveNet with the train patches and the corresponding labels<br> -- to be run 4th;
+  <li> <b>GlaciersGenerateData.py</b><br> -- script for extracting training patches and the corresponding labels from the train images; <br> -- to be run 3rd; <br> -- an equal number of patches is extracted from each train image; 
+  <li> <b>GlaciersTrainCNNpix.py</b><br> -- script for training the DeepVarveNet with the train patches and the corresponding labels; <br> -- to be run 4th;
   <li> <b>GlaciersPredict.py</b><br> -- script for finding varves in test images with the use of trained DeepVarveNet; <br> -- to be run 5th; <br> -- varve likelihood maps are saved in subdir ./preds; <br> -- final varves overlied on original data are saved in subdir ./final;
   <li> <b>models.py</b><br> -- file that defines architecture of the DeepVarveNet;
   <li> <b>GlaciersHelpers.py</b><br> -- some helper functions;
