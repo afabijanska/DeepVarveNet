@@ -1,6 +1,8 @@
 # DeepVarveNet
 
-This crepository contains source code of the DeepVarveNet - a convolutional neural network for laminae detection in images of varved sediments. To download train/test images together with expert annotations please follow: http://an-fab.kis.p.lodz.pl/DeepVarveNet/ 
+This crepository contains source code of the DeepVarveNet - a convolutional neural network for laminae detection in images of varved sediments. 
+
+To download train/test images together with expert annotations please follow: http://an-fab.kis.p.lodz.pl/DeepVarveNet/ 
 
 # Running the code
 
