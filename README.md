@@ -8,7 +8,7 @@ To download train/test images together with expert annotations please follow: ht
 
 ## Terms of use
 
-The source code and image dataset may be used for non-commercial research provided you acknowledge the source by citing the following paper:</p>
+The source code and image dataset may be freely used for non-commercial research provided you acknowledge the source by citing the following paper:</p>
 
 <ul>
     <li> <b>Fabijańska A.</b>, <b>Feder A.</b>, <b>Ridge J.</b>: <i>DeepVarveNet: Automatic detection of glacial varves with deep neural networks</i>, Computers & Geosciences, 2020, pp. 104584, doi:10.1016/j.cageo.2020.104584
