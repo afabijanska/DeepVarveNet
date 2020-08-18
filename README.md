@@ -24,7 +24,7 @@ The source code and image dataset may be used for non-commercial research provid
   year 	  = {2020},<br>
   note 	  = {},</br>
   issn 	  = {0098-3004},<br>
-  doi 	  = {https://doi.org/10.1016/j.artmed.2018.04.004}, <br>
+  doi 	  = {10.1016/j.artmed.2018.04.004}, <br>
   url 	  = {http://www.sciencedirect.com/science/article/pii/S0098300420305707}<br>
 }</code></pre>
 
