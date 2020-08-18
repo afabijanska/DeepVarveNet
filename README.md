@@ -105,4 +105,4 @@ Organize your data as below. For training, keep the filenames consistent (an ori
 Institute of Applied Computer Science<br>
 Lodz University of Technology<br>
 e-mail: anna.fabijanska@p.lodz.pl<br> 
-WWW: http://an-fab.kis.p.lodz.pl
+WWW: http://an-fab.iis.p.lodz.pl
