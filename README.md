@@ -4,6 +4,27 @@ This crepository contains source code of the DeepVarveNet - a convolutional neur
 
 To download train/test images together with expert annotations please follow: http://an-fab.kis.p.lodz.pl/DeepVarveNet/ 
 
+The source code and image dataset may be used for non-commercial research provided you acknowledge the source by citing the following paper:</p>
+
+<ul>
+    <li> <b>Fabijańska A.</b>, <b>Feder A.</b>, <b>Ridge J.</b>: <i>DeepVarveNet: Automatic detection of glacial varves with deep neural networks</i>, Computers & Geosciences, 2020, pp. 104584, doi:10.1016/j.cageo.2020.104584
+</ul>
+
+<pre><code>@article{Fabijanska2020,<br>
+  author  = {Anna Fabija\'{n}ska and Andrew Feder and John Ridge}, <br>
+  title   = {DeepVarveNet: Automatic detection of glacial varves with deep neural networks},<br>
+  journal = {Computers \& Geosciences},<br>
+  volume  = {},<br>
+  number  = {},<br>
+  pages   = {104584},<br>
+  year 	  = {2020},<br>
+  note 	  = {},</br>
+  issn 	  = {0098-3004},<br>
+  doi 	  = {https://doi.org/10.1016/j.artmed.2018.04.004}, <br>
+  url 	  = {http://www.sciencedirect.com/science/article/pii/S0098300420305707}<br>
+}</code></pre>
+
+
 # Running the code
 
 ## Prerequisites
